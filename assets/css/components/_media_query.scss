@@ -1,0 +1,170 @@
+@media screen and (max-width: 500px){
+    :root{
+        font-size: 58%;
+    }
+    .lg-heading{ font-size: 2.5rem;}
+    .md-heading{ font-size: 2rem;}  
+
+    // about section start here
+    .about_section .wrapper{
+        flex-direction: column;
+        &_box{
+            padding: 2rem 0;
+        }
+    }
+    // about section end here
+
+    // portfolio section start here 
+    .portfolio_section .img_wrapper{
+        flex-direction: column;
+    }
+    // portfolio section end here 
+
+    // team section start here 
+    .team_section .team_wrapper{
+        flex-direction: column;
+    }
+    // team section end here 
+
+    // footer section start here 
+    .footer{
+        .footer_wrapper{
+            flex-direction: column;
+            .wrapper_box{
+                &:nth-child(2){ padding: 3rem 0;}
+                h4{ font-size: 1.6rem;}
+            }
+            .newsletter{
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+    // footer section end here 
+}
+
+@media screen and (max-width: 768px){
+    // slider section start here 
+    .slider-section .item .item-wrapper .content-box .content_item{ 
+        padding: 0 1rem;
+    }
+    .owl-next,.owl-prev{
+        opacity: 0;
+        span{font-size: 5rem !important;}
+    }
+    .slider-section:hover .owl-prev{opacity: 1;}
+    .slider-section:hover .owl-next{opacity: 1;}
+    // slider section end here
+
+    // navbar section start here 
+    .navbar{
+        .logo{
+            width: 100%;
+            &_toggle{
+                display: inline-block;
+                font-size: 2rem;
+                color: $gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $gray;
+                padding: .4em .5em;
+                border-radius: 100%;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    color: $red;
+                    border-color: $red;
+                }
+            }
+        }
+        .menu{
+            position: fixed;
+            left: 0;top: 0;
+            width: 0%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.8);
+            align-items: flex-start;
+            overflow: hidden;
+            transition: all .38s ease-in-out;
+            .close_menu{
+                display: inline-block;
+                color: $gray;
+                position: absolute;
+                top: 15px;
+                right: 25px;
+                font-size: 3rem;
+                cursor: pointer;
+                transition: color .3s ease-in-out;
+                &:hover{ color: $red;}
+            }
+            &_bar{
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: $dark;
+                width: 50%;
+                height: 100vh;
+                padding-top: 3rem;
+                padding-left: 2rem;
+                &_item{
+                    margin: .5em 0;
+                }
+            }
+
+        }
+    }
+    // navbar section end here 
+
+    // features section start here 
+    .features_section .wrapper{flex-direction: column;}
+    // features section end here  
+
+    // services section start here 
+    .services_section .wrapper{ flex-direction: column;}
+    // services section end here
+    // contact section start here 
+    .contact_section{
+        .contact_item{
+            flex-direction: column;
+            .box{
+                &:nth-child(2){
+                    border: none;
+                    margin: 2rem 0;
+                }  
+            }
+        }
+        .contact_form .wrapper{ flex-direction: column;}
+    }
+    // contact section end here 
+
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px){
+    :root{ font-size: 60%;}
+
+    // about section start here
+    .about_section .wrapper{
+        flex-wrap: wrap;
+        &_box{
+            flex-basis: 48%;
+            padding: 2rem 0;
+        }
+    }
+    // about section end here
+
+    .portfolio_section .img_wrapper .box{ flex-basis: 48%;}
+
+    .team_section .team_wrapper .box{ flex-basis: 50%; margin-bottom: 3rem;}
+
+    // footer section start here 
+    .footer .wrapper_box:nth-child(3) { padding: 3rem 0;}
+    // footer section end here 
+}
+@media screen and (min-width: 769px) and (max-width:1200px){
+    :root{ font-size: 58%;}
+}
+
+@media screen and (orientation: landscape) and (max-height:450px){
+    .header,.slider-section,.slider-section .item .item-wrapper{ height: 90vmax;}
+}

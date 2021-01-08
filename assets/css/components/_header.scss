@@ -1,0 +1,135 @@
+.header{
+    position: relative;
+    width: 100%;
+    height: $fullHeight;
+    overflow: hidden;
+
+}
+.navbar{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    padding: 2rem 0;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+    &,.container{
+        display: flex; 
+        justify-content: space-between;
+        text-align: center;
+    }
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_links{
+            color: $gray;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            border-left: 5px solid $red;
+            padding-left: .3em;
+        }
+        &_toggle{
+            display: none;
+        }
+    }
+    .menu{
+        position: relative;
+        display: flex;
+        align-items: center;
+        .close_menu{ display: none;}
+        &_bar{
+            display: flex;
+            &_item{
+                margin: 0 1.2rem;
+                &:last-child{ margin-right: 0;}
+                &_links{
+                    text-transform: uppercase;
+                    color: $white;
+                    font-weight: 600;
+                    transition: all .3s ease-in-out;
+                    &:hover{ color: $red;}
+                }
+            }
+        }
+    }
+}
+
+// navbar fixed here code 
+.navbar_fixed{
+    position: fixed;
+    background-color: $dark;
+}
+
+.slider-section{
+    position: absolute;
+    left: 0; top: 0;right: 0;
+    height: $fullHeight;
+    width: 100%;
+    .active{
+        background-color: $red !important;
+    }
+    .item{
+        position: relative;
+        .item-wrapper{
+            position: relative;
+            height: $fullHeight;
+            width: 100%;
+            .img-box , .content-box{
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .img-box{
+                img{width: 100%; height: 100%; object-fit: cover;}
+            }
+            .content-box{
+                background-color: rgba(0, 0, 0, 0.685);
+                .content_item{
+                    position: absolute;
+                    left: 0;top: 50%;right: 0;
+                    transform: translateY(-50%);
+                    h2,p{ color: $gray;}
+                    .btn{
+                        margin-top: 1em;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .owl-nav{
+        .owl-next,.owl-prev{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .5s ease-in-out;
+            &:focus{  outline: none; border: none; box-shadow: none;}
+            span{ 
+                font-size: 8rem;
+                color: $red;
+                padding: 0 .1em;
+                transition: color .5s ease-in-out;
+                &:hover{ color: $gray;}
+            }
+        }
+        .owl-next{ right: 0;}
+        .owl-prev{ left: 0;}
+    }
+    .owl-dots{
+        position: absolute;
+        bottom: 1%;
+        left: 0; right: 0;
+        text-align: center;
+        .owl-dot{
+            width: 30px;
+            height: 5px;
+            margin: 0 .5rem;
+            background-color: $gray;
+            &:focus{ outline: none; border: none; box-shadow: none;}
+        }
+    }
+}

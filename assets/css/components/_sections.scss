@@ -1,0 +1,471 @@
+// features section start here 
+.features_section{
+    background-color: #000;
+    padding: 3rem 0;
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        &_box2{
+            background: linear-gradient(#000,#202020,#000);
+        }
+        &_box{
+            flex-basis: 33.3333333%;
+            // border: 1px solid red;
+            padding: 0 2rem;
+            color: $gray;
+            i{ font-size: 4rem; color: $red;}
+            h4{ margin-bottom: .5em;}
+            p{ font-size: 1.4rem; margin-bottom: .5em;}
+        }
+    }
+}
+// features section end here 
+
+// about section start here 
+.about_section{
+    background: linear-gradient(rgba(255, 255, 255, 0.863),rgba(255, 255, 255, 0.87)) ,url('./../img/about-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 5rem 0;
+    .about_header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2rem;
+        p{ padding: 3rem 0;text-align: center; color: $dark; }
+    }
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        &_box{
+            flex-basis: 31.5%;
+            .about-col{
+                display: flex;
+                flex-direction: column;
+                background-color: $white;
+                border-radius: 5px;
+                height: 100%;width: 100%;
+                overflow: hidden;
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.281);
+
+                .img{
+                    img{width: 100%; height: 100%; object-fit: cover;} 
+                    position: relative;
+                    .icon{
+                        position: absolute;
+                        left: 50%;transform: translateX(-50%);
+                        bottom: -15%;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 100%;
+                        background-color: $red;
+                        border: 5px solid $white;
+                        display: flex; justify-content: center;
+                        align-items: center;
+                        i{ font-size: 3rem; color: $white; transition: color .5s ease-in-out;}
+                        transition: background-color .5s ease-in-out;
+                    }
+                }
+                .title{
+                    margin-top: 5rem;
+                    text-align: center;
+                    a{ font-size: 2rem; color: $dark;}
+                }
+                p{padding: .5em 1.2em 1.2em 1.2em;color: $dark;}
+
+                &:hover .icon{
+                    background-color: $white;
+                    i{ color: $red;}
+                }
+            }
+
+        }
+
+
+    }
+
+}
+// about section end here 
+// .services_section start here 
+.services_section{
+    padding: 5rem 0;
+    .services_header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{ color: $dark; padding: 3rem 0; text-align: center;}
+    }
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        &_box{
+            padding: 1rem;
+            flex-basis: 32%;
+            .icon{ font-size: 4rem; color: $red; }
+            .title{ 
+                &,a{ color: $dark; font-size: 2rem; transition: color .5s ease-in-out;}
+             }
+             .description{ text-align: left; padding: 1rem 0;}
+            &:hover .title{
+                &,a{ color: $red;}
+            }
+        }
+    }
+}
+// services section end here 
+
+// call to action section start here 
+.call_to_action_section{
+    background: url('./../img/call-to-action-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 5rem 0;
+    text-align: center;
+    h2{ font-size: 2.5rem; color: $white; margin-bottom: 1rem;}
+    p{ color: $gray; margin-bottom: 2rem;}
+    .cta-btn{
+        border: 2px solid $gray;
+        border-radius: 100px;
+        color: $white;
+        text-transform: uppercase;
+        &:hover{ background-color: $red;}
+    }
+}
+// call to action section end here 
+
+// portfolio section start here 
+.portfolio_section{
+    padding: 5rem 0;
+    background-color: $gray;
+    .portfolio_header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+        .md-heading{ margin-bottom: 3rem; }
+        .tab_wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            .tab_item{
+                font-size: 1.6rem;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                color: $dark;
+                background-color: $white;
+                border-radius: 5px;
+                margin: .5em;
+                padding: .3em 1em;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.171);
+                &:hover{
+                    transform: translateY(-10%);
+                    background-color: $red;
+                    color: $gray;
+                }
+            }
+        }
+        
+    }
+    .img_wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        overflow: hidden;
+        .box{
+            flex-basis: 32%;
+            margin-bottom: 3.2rem;
+            overflow: hidden;
+            border-radius: 5px;
+            background-color: $white;
+            transition: all .3s ease-in-out;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.171);
+            &:hover{
+                transform: translateY(1%);
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.171);
+            }
+            .img_box{
+                height: 70%;
+                img{ width: 100%; height: 100%; object-fit: cover;}
+            }
+            .img_text{
+                text-align: center;
+                padding: 3rem 0;
+                h2{ text-transform: capitalize; font-size: 1.8rem; font-weight: 400;color: $dark;}
+                p{ text-transform: uppercase; color: rgba(128, 128, 128, 0.712);}
+            }
+        }
+    }
+}
+// portfolio section end here 
+
+// client section start here 
+.client_section{
+    padding: 5rem 0;
+    .client_header{display: flex; flex-direction: column;align-items: center;}
+    .owl-client{
+        margin: 3rem 0;
+        img{ opacity: .6; width: 100%; object-fit: cover;}
+        position: relative;
+        .owl-dots{
+            text-align: center;
+            padding-top: 3rem;
+            .owl-dot{
+                &:focus{ outline: none; border: 1px solid $red;}
+                width: 1.4rem; height: 1.4rem;
+                border-radius: 100%;
+                background-color: $gray;
+                border: 1px solid $red;
+                margin: 0 .5rem;
+            }
+            .active{
+                border: 1px solid $red;
+                background-color: $red !important;
+            }
+        }
+    }
+}
+// client section end here 
+
+// testimonials section start here 
+.testimonials_section{
+    padding: 5rem 0;
+    background-color: $gray;
+    overflow: hidden;
+    .testimonials_header{
+        margin-bottom: 3rem;
+        display: flex; flex-direction: column;
+        align-items: center;
+    }
+    .owl-testimonials{
+        margin: 3rem 0;
+        position: relative;
+        .testimonial-item{
+            text-align: center;
+            color: $dark;
+            padding-bottom: 2rem;
+            .testimonial-img{
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+                margin: 0 auto;
+                border: 5px solid $white;
+            }
+            h3{ font-size: 3rem; color: $black;}
+            h4{ font-size: 1.8rem; color: $dark; font-weight: 400; font-style: italic;}
+            p{
+                position: relative;
+                padding-left: 2rem;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    margin-right: 10px;
+                    margin-top: -5px;
+                    width: 20px; height: 20px;
+                    background: url('./../img/quote-sign-left.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 100% 100%;  
+                }
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    margin-left: 10px;
+                    margin-top: 5px;
+                    width: 20px; height: 20px;
+                    background: url('./../img/quote-sign-right.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 100% 100%;
+                }
+            }
+
+        }
+        .owl-dots{
+            text-align: center;
+            .owl-dot{
+                &:focus{ outline: none; border: 1px solid $red;}
+                width: 1.4rem; height: 1.4rem; border-radius: 100%;
+                background-color: $white;
+                margin: 0 5px;
+                border: 1px solid $red;
+            }
+            .active{
+                border: 1px solid $red;
+                background-color: $red !important;
+            }
+        }
+    }
+}
+// testimonials section end here
+
+// team section start here 
+.team_section{
+    padding: 5rem 0;
+    .team_header{
+        display: flex; flex-direction: column; align-items: center;
+        p{ color: $dark; margin: 3rem 0;}
+    }
+    .team_wrapper{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .box{
+            flex-basis: 25%;
+            overflow: hidden;
+            .team_box{
+                height: 100%;
+                margin: 1.5rem;
+                position: relative;
+                img{ width: 100%;height: 100%; object-fit: cover;}
+                .team_content{
+                    position: absolute;
+                    left: 0;top: 0;
+                    height: 0; width: 100%;
+                    border-radius: 100%;
+                    background-color: rgba(0, 0, 0, 0.651);
+                    overflow: hidden;
+                    transition: all .5s ease-in-out;
+                    &_item{
+                        position: absolute;
+                        left: 0;right: 0;
+                        top: 50%;transform: translateY(-50%);
+                        text-align: center;
+                        h4{ color: $gray; font-size: 2rem; letter-spacing: .08em; font-weight: 400;}
+                        span{ color: $white; font-size: 1.4rem; letter-spacing: .08em; font-style: italic;}
+                        .social{
+                            padding: 1rem 0;
+                            a{ 
+                                color: $white; margin: 0 .2rem;
+                                font-size: 1.4rem;
+                                transition: color .5s ease-in-out;
+                                &:hover{ color: $red;}
+                            }
+                        }
+
+                    }
+                }
+
+                &:hover .team_content{
+                    height: 100%;
+                    border-radius: 0;
+                }
+
+            }
+        }
+    }
+}
+// team section end here 
+
+// contact section start here
+.contact_section{
+    background-color: $gray;
+    padding: 5rem 0;
+    .contact_header{
+        display: flex;flex-direction: column; align-items: center;
+        text-align: center;
+        p{ margin: 3rem 0; color: $dark;}
+    }
+    .contact_item{
+        display: flex;
+        justify-content: space-evenly;
+        .box{
+            flex-basis: 32%;
+            text-align: center;
+            i{ color: $red; font-size: 5rem;}
+            h3{ color: $dark; opacity: .8; text-transform: uppercase; font-size: 1.8rem; font-weight: 400; letter-spacing: .08em;}
+            address,a{ color: $black;}
+            &:nth-child(2){
+                border-right: 1px solid rgba(0, 0, 0, 0.171);
+                border-left: 1px solid rgba(0, 0, 0, 0.171);
+            }
+        }
+    }
+    .contact_form{
+        margin-top: 3rem;
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .form-group{
+                flex-basis: 49%;
+            }
+        }
+        .form-group{
+            padding: 1rem 0;
+        }
+        .btn-danger:hover{
+            color: $dark;
+        }
+    }
+}
+// contact section end here 
+
+// footer section start here 
+.footer{
+    padding-top: 3rem;
+    background-color: $dark;
+    .footer_wrapper{
+        padding-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .wrapper_box{
+            flex-basis: 32%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h4{ font-size: 2rem; font-weight: 400; margin-bottom: 1.5rem; letter-spacing: .08em; word-spacing: .08em;}
+            h4,a,p,i{ color: $gray;}
+            p{ font-size: 1.4rem;}
+            .footer_links{
+                li{
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.712);
+                    padding: .5rem 0;
+                    &:hover a{
+                        transition: color .3s ease-in-out;
+                        color: $red;
+                    }
+                }
+            }
+            .social-links{
+                display: flex;
+                a{
+                    background-color: gray;
+                    width: 30px; height: 30px;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1.5rem .5rem;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+            .newsletter{
+                display: flex;
+            }
+        }
+    }
+    .copyright{
+        border-top: 1px solid $red;
+        padding: 2rem 0;
+        background-color: $black;
+        text-align: center;
+        color: $gray;
+    }
+
+}
+// footer section end here 

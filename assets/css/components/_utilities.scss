@@ -1,0 +1,187 @@
+.loader{
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: $white;
+    z-index: 99;
+    transition: all .5s ease-in-out;
+    display: flex; justify-content: center; align-items: center;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.hide_loader{ 
+    opacity: 0.5;
+    transform: rotateY(90deg);
+}
+
+.container{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.active{
+    color: $red !important;
+}
+
+.show_navbar{ width: 100% !important;}
+
+.lg-heading{
+    font-size: 4rem;
+    letter-spacing: .08em;
+    margin-bottom: .5em;
+    &::after{
+        content: '';
+        display: block;
+        width: 0; height: 3px;
+        border-radius: 50px;
+        background-color: $red;
+        animation-name: smooth_line;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+.md-heading{
+    font-size: 3rem;
+    position: relative;
+    color: $dark;
+    text-transform: uppercase;
+    &::before{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;bottom: 1px;
+        width: 100%;height: 1px;
+        background-color: gray;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 50%; bottom: 0;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 3px;
+        background-color: $red;
+    }
+
+}
+.sm-heading{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .08em;
+    word-spacing: .08em;
+    &::first-letter{ color: $red; font-weight: 700;}
+}
+.btn{
+    display: inline-block;
+    font-size: 1.4rem;
+    letter-spacing: .08em;
+    word-spacing: .08em;
+    cursor: pointer;
+    padding: .5em 1.5em;
+    outline: none; border: none; box-shadow: none;
+    &:focus{outline: none; border: none; box-shadow: none;}
+    transition: all .5s ease-in-out;
+}
+.rounded-btn{ border-radius: 100px;}
+.btn-danger{
+    background-color: $red;
+    border: 2px solid $red;
+    color: $gray;
+    &:focus{ border: 2px solid $red;}
+    &:hover{ background-color: transparent;}
+}
+.btn-outline-danger{
+    border: 2px solid $red;
+    color: $gray;
+    &:hover{
+        background-color: $red;
+    }
+}
+input,textarea{
+    &,&:focus{ outline: none; border: 1px solid rgba(0, 0, 0, 0.521); box-shadow: none;}
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: .5em;
+    letter-spacing: .08em;
+    word-spacing: .08;
+    transition: background-color .5s ease-in-out;
+    &::placeholder{
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: $dark;
+        opacity: .8;
+    }
+}
+.text-center{
+    text-align: center;
+}
+textarea::placeholder{ font-size: 1.7rem;}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-control{
+    &:focus{ border-color: $red;}
+}
+.fadeOut  {
+    animation-name : fadeOut  ;
+}
+@keyframes  fadeOut  {
+    0% {
+        opacity : 1   ;
+    }  
+    100% {
+        opacity : 0   ;
+    }  
+}
+
+@keyframes smooth_line{
+    0%{ width: 9%;}
+    50%{ width: 10%;}
+    100%{ width: 9%;}
+}
+
+.top_btn{
+    position: fixed;
+    right: 3rem; bottom: 3rem;
+    display: flex; align-items: center;
+    justify-content: center;
+    width: 2rem; height: 2rem;
+    border-radius: 100%;
+    font-size: 3rem;
+    padding: .6em;
+    font-weight: bolder;
+    background-color: $red;
+    border: 2px solid $gray;
+    color: $gray;
+    animation: bounce 2s ease-in-out infinite;
+    z-index: 5;
+    visibility: hidden;
+    z-index: -5;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.521);
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    &:hover{
+        background-color: $black;
+        animation-play-state: paused;
+    }
+
+}
+.show_top_btn{
+    visibility: visible;
+    z-index: 5;
+}
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
